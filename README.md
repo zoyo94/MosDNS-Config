@@ -1,5 +1,5 @@
 # 感谢 ✿✿ヽ(°▽°)ノ✿
-https://github.com/xiaomqw/MosDNS-Config 作者！！！
+https://github.com/moreoronce/MosDNS-Config 作者！！！
 ----
 
 根据 [moreoronce/MosDNS-Config](https://github.com/moreoronce/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
