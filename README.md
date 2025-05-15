@@ -1,3 +1,5 @@
+根据 [xiaomqw/MosDNS-Config](https://github.com/xiaomqw/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
+
 # 我的模式流程图：
 
 ![我的模式流程图](./photo.png)
@@ -31,8 +33,6 @@
 
 ![image](https://github.com/user-attachments/assets/8b56d92c-c5ec-48dc-8b41-650324f46fad)
 
-
-根据 [moreoronce/MosDNS-Config](https://github.com/moreoronce/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
 
 教程及DNS处理队列详解：[自用MosDNS规则分享](https://deeprouter.org/article/mosdns-config-with-no-leak)
 
