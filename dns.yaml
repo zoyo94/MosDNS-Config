@@ -6,41 +6,20 @@ plugins:
     args:
       concurrent: 3
       upstreams:
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "2001:4860:4860::6464"
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "2001:4860:4860::0064"
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "2001:4860:4860::8844"
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "2001:4860:4860::8888"
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "8.8.4.4"
+        # DoH over HTTP/3（推荐）
         - addr: "https://dns.google/dns-query"
           dial_addr: "8.8.8.8"
-
+          enable_http3: true
+        - addr: "https://dns.google/dns-query"
+          dial_addr: "2001:4860:4860::8888"
+          enable_http3: true
+        # DoT with pipeline
         - addr: "tls://dns.google"
           dial_addr: "8.8.4.4"
-          enable_pipeline: true # TCP/DoT 启用 RFC 7766 新的 query pipelining 连接复用模式
-        - addr: "tls://dns.google"
-          dial_addr: "2001:4860:4860::8888"
           enable_pipeline: true
         - addr: "tls://dns.google"
-          dial_addr: "8.8.8.8"
-          enable_pipeline: true
-        # h3
-        - addr: "https://dns.google/dns-query"
           dial_addr: "2001:4860:4860::8844"
-          enable_http3: true
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "8.8.4.4"
-          enable_http3: true
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "2001:4860:4860::8888"
-          enable_http3: true
-        - addr: "https://dns.google/dns-query"
-          dial_addr: "8.8.8.8"
-          enable_http3: true
+          enable_pipeline: true
 
   # cloudflare doh dot h3
   - tag: cloudflare
@@ -48,32 +27,29 @@ plugins:
     args:
       concurrent: 3
       upstreams:
+        # DoH over HTTP/3
         - addr: "https://1.1.1.1/dns-query"
           dial_addr: "1.1.1.1"
-
-
+          enable_http3: true
+        # DoT with pipeline
         - addr: "tls://1.1.1.1"
           dial_addr: "1.1.1.1"
           enable_pipeline: true # TCP/DoT 启用 RFC 7766 新的 query pipelining 连接复用模式
-        - addr: "tls://1.1.1.1"
-          dial_addr: "1.1.1.1"
-          enable_pipeline: true
 
   - tag: nextdns
     type: forward
     args:
       concurrent: 2
       upstreams:
-        - addr: "https://dns.nextdns.io"
-          dial_addr: "45.90.28.186"
+        - addr: "https://dns.nextdns.io/3ae5e6"
+          dial_addr: "45.90.28.25"
           enable_http3: true
-        - addr: "https://dns.nextdns.io"
-          dial_addr: "2a07:a8c0::ae:d5cb"
+        - addr: "https://dns.nextdns.io/3ae5e6"
+          dial_addr: "2a07:a8c0::3a:e5e6"
           enable_http3: true
-
-        - addr: "tls://dns.nextdns.io"
+        - addr: "tls://3ae5e6.dns.nextdns.io"
           enable_pipeline: true
-          dial_addr: "45.90.28.186"
+          dial_addr: "45.90.30.25"
 
   - tag: quad9
     type: forward
@@ -128,15 +104,17 @@ plugins:
       concurrent: 3
       upstreams:
         - addr: "https://doh.pub/dns-query"
-          dial_addr: "1.12.12.12"
+          dial_addr: "119.29.29.29"
+          enable_http3: true
         - addr: "https://doh.pub/dns-query"
-          dial_addr: "120.53.53.53"
+          dial_addr: "2402:4e00::"
+          enable_http3: true
 
         - addr: "tls://dot.pub"
-          dial_addr: "1.12.12.12"
+          dial_addr: "119.29.29.29"
           enable_pipeline: true
         - addr: "tls://dot.pub"
-          dial_addr: "120.53.53.53"
+          dial_addr: "2402:4e00::"
           enable_pipeline: true
 
   # local dns
