@@ -1,11 +1,10 @@
 # 感谢 ✿✿ヽ(°▽°)ノ✿
-https://github.com/moreoronce/MosDNS-Config 作者！！！
+[moreoronce/MosDNS-Config](https://github.com/moreoronce/MosDNS-Config) 作者！！！
 ----
 
 根据 [moreoronce/MosDNS-Config](https://github.com/moreoronce/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
 
-参考：
-https://deeprouter.org/article/OpenClash-Mosdns%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2DNS%E6%B3%84%E9%9C%B2%EF%BC%9F
+[参考：deeprouter](https://deeprouter.org/article/OpenClash-Mosdns%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2DNS%E6%B3%84%E9%9C%B2%EF%BC%9F)
 
 本配置需要使用的服务端口如下，有变动的自行修改：
 |服务名|协议|端口号|备注|
