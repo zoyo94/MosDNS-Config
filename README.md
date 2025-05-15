@@ -1,5 +1,6 @@
 # 感谢 ✿✿ヽ(°▽°)ノ✿
 https://github.com/xiaomqw/MosDNS-Config 作者！！！
+----
 
 根据 [xiaomqw/MosDNS-Config](https://github.com/xiaomqw/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
 
@@ -10,7 +11,7 @@ https://www.right.com.cn/forum/thread-8355510-1-1.html
 |服务名|协议|端口号|备注|
 |---|---|---|---|
 |OpenClash|Sock5|7891|因为mosdns不支持账号密码没用此端口配mosdns|
-|Openclash|代理端口|7874||
+|Openclash|DNS|7874||
 |dnsmasq|DNS|5553|服务端口[被Adguardhome替换了|
 |MosDNS|API|9091||
 |MosDNS|DNS|5335||
