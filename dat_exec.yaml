@@ -4,35 +4,35 @@ plugins:
     type: ip_set
     args:
       files:
-        - "/var/mosdns/geoip_private.txt"
+        - "/etc/mosdns/geo/geoip_private.txt"
   - tag: geoip_cn # cn ip
     type: ip_set
     args:
       files:
-        - "/var/mosdns/geoip_cn.txt"
+        - "/etc/mosdns/geo/geoip_cn.txt"
 
   - tag: geosite_cn # cn 域名
     type: domain_set
     args:
       files:
-        - "/var/mosdns/geosite_cn.txt"
+        - "/etc/mosdns/geo/geosite_cn.txt"
         - "/etc/mosdns/rule/whitelist.txt"
   - tag: geosite_gfw # gfw 域名
     type: domain_set
     args:
       files:
-        - "/var/mosdns/geosite_gfw.txt"
+        - "/etc/mosdns/geo/geosite_gfw.txt"
         - "/etc/mosdns/rule/greylist.txt"
   - tag: geosite_location-!cn # 非 cn 域名
     type: domain_set
     args:
       files:
-        - "/var/mosdns/geosite_geolocation-!cn.txt"
+        - "/etc/mosdns/geo/geosite_geolocation-!cn.txt"
   - tag: geosite_ads-all # 广告域名
     type: domain_set
     args:
       files:
-        - "/var/mosdns/geosite_category-ads-all.txt"
+        - "/etc/mosdns/geo/geosite_category-ads-all.txt"
 
   ################# 可执行插件 ################
 

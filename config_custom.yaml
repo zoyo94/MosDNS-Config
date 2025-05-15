@@ -3,7 +3,7 @@ log:
   file: "/var/log/mosdns.log"
 
 api:
-  http: "0.0.0.0:8338" # api 监听地址
+  http: "0.0.0.0:9091" # api 监听地址
 
 include:
   - "/etc/mosdns/dat_exec.yaml"
@@ -201,8 +201,8 @@ plugins:
   - type: udp_server
     args:
       entry: sequence
-      listen: :5333
+      listen: :5335
   - type: tcp_server
     args:
       entry: sequence
-      listen: :5333
+      listen: :5335
