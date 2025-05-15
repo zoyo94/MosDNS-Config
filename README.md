@@ -1,3 +1,21 @@
+# 感谢 ✿✿ヽ(°▽°)ノ✿
+https://github.com/xiaomqw/MosDNS-Config 作者！！！
+----
+
+根据 [moreoronce/MosDNS-Config](https://github.com/moreoronce/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
+
+参考：
+https://deeprouter.org/article/OpenClash-Mosdns%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2DNS%E6%B3%84%E9%9C%B2%EF%BC%9F
+
+本配置需要使用的服务端口如下，有变动的自行修改：
+|服务名|协议|端口号|备注|
+|---|---|---|---|
+|Openclash|DNS|7874|我没有用mosdns下发给clash|
+|dnsmasq|DNS|5553|服务端口[被Adguardhome替换了|
+|MosDNS|API|9091||
+|MosDNS|DNS|5335||
+|Adguardhome|DNS|53|5553重定向:使用53端口替换dnsmasq，所以dnsmasq端口就是5553了|
+
 # 我的模式流程图：
 
 ![我的模式流程图](./photo.png)
@@ -31,8 +49,6 @@
 
 ![image](https://github.com/user-attachments/assets/8b56d92c-c5ec-48dc-8b41-650324f46fad)
 
-
-根据 [moreoronce/MosDNS-Config](https://github.com/moreoronce/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
 
 教程及DNS处理队列详解：[自用MosDNS规则分享](https://deeprouter.org/article/mosdns-config-with-no-leak)
 

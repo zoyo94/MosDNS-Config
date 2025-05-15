@@ -98,7 +98,7 @@ plugins:
   - tag: query_gfw
     type: sequence
     args:
-      - exec: $forward_remote
+      - exec: $dns_nocn
 
   # query fallback
   - tag: query_fallback
