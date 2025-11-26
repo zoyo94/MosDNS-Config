@@ -17,7 +17,13 @@
 
 # 我的模式流程图：
 
-![我的模式流程图](./photo.png)
+- config1/2
+
+![我的模式流程图1](./photo.png)
+![我的模式流程图2](./photo2.png)
+
+- config3
+![我的模式流程图3](./photo3.png)
 
 # 自用MosDNS配置
 
