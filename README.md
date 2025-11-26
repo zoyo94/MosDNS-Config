@@ -1,5 +1,11 @@
 # 感谢 ✿✿ヽ(°▽°)ノ✿
 [xiaomqw/MosDNS-Config](https://github.com/xiaomqw/MosDNS-Config)  作者！！！
+
+----
+
+# 设置了这么多，手配了这么多。
+# 2025-11-26最后试了试直接在界面配置无需自定义配置，防止DNS泄露完全通过。
+# 我改回了界面配置了，这些配置放弃他吧
 ----
 
 根据 [xiaomqw/MosDNS-Config](https://github.com/xiaomqw/MosDNS-Config)  进行二次修改，因为[GeoData 导出]导出不了对应的geo文件只好使用手动导入，并更换了对应的目录,不然启动会覆盖原有的geo文件
